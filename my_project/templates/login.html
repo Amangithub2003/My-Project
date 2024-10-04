@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}login page{% endblock %}
+
+{% block left %}
+<a href="{% url 'index' %}">Home</a>
+
+
+<a href="{% url 'about' %}">about</a>
+<a href="{% url 'help' %}">help</a>
+
+
+
+
+
+{% endblock %}
+{% block button %}<a href="{% url 'sign_in' %}" class="btn btn-primary">sign_in</a>{% endblock %}
+
+
+{% block content %}
+    <div class="login-container">
+
+        <h2>Login</h2>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p>please log-in to explore more!! </p>
+
+        <a href="{% url 'sign_in' %}" class="btn btn-primary">creat account</a>
+
+        
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+    
+{% endblock %}
+

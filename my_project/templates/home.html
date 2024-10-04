@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Discover Your learning path{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '\css\course.css' %}"> 
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+
+        <div class="left-items">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+        
+        
+            <a href="#">Home</a>
+            <a href="{% url 'course' %}">course</a>
+            <a href="#">teacher</a>
+            <a href="{% url 'about' %}">about</a>
+            <a href="{% url 'help' %}">help</a>
+
+            
+        </div>
+
+        
+        <div id="btn-primary">
+            {% block button %}
+
+            
+            
+            
+            <div id="sidebar">
+                <a href="{% url 'logout' %}" class="btn btn-primary">log-out</a>
+                <a href="#" class="btn btn-primary">my account</a>
+
+
+            </div>
+            
+            {% endblock %}
+        </div>
+        
+          
+    
+
+        
+        
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-love">
+            
+        </div>
+        <div class="hero-text">
+            <h2>welcome, {{ user.first_name }} {{ user.last_name }}</h2>
+            <h1>Discover Your Learning Path</h1>
+            <p>Explore our diverse online courses and enhance your skills from anywhere. Start your learning journey today!</p>
+            <a href="{% url 'course' %}" class="btn">explore course</a>
+        </div>
+        <div class="hero-images">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+            <!-- <img src="{% static 'annie-spratt-W0pMGlPogow-unsplash.jpg' %}" alt="Person with a dog and laptop"> -->
+        </div>
+    </div>
+
+    <!-- Courses Section -->
+    {% block content %}
+        <div class="courses-section">
+            <h2>Courses</h2>
+            <div class="courses">
+                <div class="course-card">
+                    <h3>Digital Marketing Fundamentals</h3>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="course-card">
+                    <h3>Programming Basics</h3>
+                    <button class="btn">Learn More</button>
+                </div>
+                <div class="course-card">
+                    <h3>Graphic Design Essentials</h3>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Exillence</h3>
+                <p>Exillence is an online learning platform offering top-tier courses across various fields. Our mission is to make education accessible, affordable, and impactful for everyone.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/course">Courses</a></li>
+                    <li><a href="/help">Help</a></li>
+                    
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@exillence.com">support@exillence.com</a></p>
+                <p>Phone: +123-456-7890</p>
+                <p>Address: 123 Learning Lane, Education City</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Exillence. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

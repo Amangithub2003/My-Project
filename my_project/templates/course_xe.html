@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}data science{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '\css\course_xe.css' %}"> 
+
+</head>
+
+
+<body>
+
+    <div class="header">
+
+        <div class="left-items">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+        
+        
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'course' %}">course</a>
+            <a href="#">teacher</a>
+            <a href="{% url 'about' %}">about</a>
+            <a href="{% url 'help' %}">help</a>
+
+            
+        
+        
+        </div>
+
+        
+        <div id="btn-primary">
+            <a href="#" class="btn btn-primary">account</a>
+        </div>
+        
+          
+    
+
+        
+        
+    </div>
+
+
+    
+    <div class="container">
+        <!-- Course Overview Section -->
+        <div class="course-overview">
+            <img src="\static\annie-spratt-V_yEK9wOuPw-unsplash.jpg"  alt="Excel Mastery">
+            <div class="right">
+                <h2> Data Science Course</h2>
+                <p>6 months - Multiple Modules</p>
+                
+                
+                <button class="resume-btn">enroll in course </button>
+            </div>
+        </div>
+
+        <!-- Course -->
+        <div class="course">
+            <!-- Module 1 -->
+            <div class="module">
+                <h3 onclick="toggleModule('module1')">Module 1: Introduction to Programming 
+                    
+                </h3>
+                
+
+                <!-- Lessons inside Module 1 -->
+                <div class="lessons" id="module1">
+                    <div class="lesson">
+                        <h4 onclick="toggleLessons('module1-lesson1')">Lesson 1: Python Basics</h4>
+                        <ul class="lesson-details" id="module1-lesson1">
+                            <li>Introduction to Python</li>
+                            <li>Basic Syntax</li>
+                            <li>Control Flow in Python</li>
+                        </ul>
+                    </div>
+                    <div class="lesson">
+                        <h4 onclick="toggleLessons('module1-lesson2')">Lesson 2: Advanced Python</h4>
+                        <ul class="lesson-details" id="module1-lesson2">
+                            <li>Python Data Structures</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>Working with Libraries</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module">
+                <h3 onclick="toggleModule('module2')">Module 2: Data Analysis with Python 
+                    
+                </h3>
+                
+
+                <!-- Lessons inside Module 2 -->
+                <div class="lessons" id="module2">
+                    <div class="lesson">
+                        <h4 onclick="toggleLessons('module2-lesson1')">Lesson 1: Pandas for Data Analysis</h4>
+                        <ul class="lesson-details" id="module2-lesson1">
+                            <li>Introduction to Pandas</li>
+                            <li>DataFrames and Series</li>
+                            <li>Data Cleaning</li>
+                        </ul>
+                    </div>
+                    <div class="lesson">
+                        <h4 onclick="toggleLessons('module2-lesson2')">Lesson 2: Data Visualization</h4>
+                        <ul class="lesson-details" id="module2-lesson2">
+                            <li>Introduction to Matplotlib</li>
+                            <li>Creating Charts and Graphs</li>
+                            <li>Advanced Visualizations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module">
+                <h3 onclick="toggleModule('module3')">Module 3: Machine Learning Basics 
+                    
+                </h3>
+                
+
+                <!-- Lessons inside Module 3 -->
+                <div class="lessons" id="module3">
+                    <div class="lesson">
+                        <h4 onclick="toggleLessons('module3-lesson1')">Lesson 1: Introduction to ML</h4>
+                        <ul class="lesson-details" id="module3-lesson1">
+                            <li>What is Machine Learning?</li>
+                            <li>Types of ML Algorithms</li>
+                            <li>Supervised vs Unsupervised Learning</li>
+                        </ul>
+                    </div>
+                    <div class="lesson">
+                        <h4 onclick="toggleLessons('module3-lesson2')">Lesson 2: Linear Regression</h4>
+                        <ul class="lesson-details" id="module3-lesson2">
+                            <li>Understanding Regression</li>
+                            <li>Simple Linear Regression</li>
+                            <li>Implementing Linear Regression in Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more modules as needed -->
+        </div>
+    </div>
+    <script src="static\js\course_xe.js"></script>
+</body>
+</html>
+

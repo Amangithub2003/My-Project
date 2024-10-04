@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}sign-up page{% endblock %}
+{% block button %}<a href="{% url 'login' %}" class="btn btn-primary">login</a>{% endblock %}
+
+
+{% block content %}
+    <div class="left-section">
+        <h2>Get a Free 7 Day Pass</h2>
+        <p>Join the Program and Rediscover Your Confidence</p>
+        <ul>
+            <li>A Results-Driven Training Method</li>
+            <li>A Nutrition Plan You Can Stick To</li>
+        </ul>
+    </div>
+    <div class="right-section">
+        <h2>Let's Get Started</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+
+            <a href="{% url 'login' %}">Already have account</a>
+            
+            {% if form.errors %}
+                <div>
+                    <ul>
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+        </form>
+        
+        
+    </div>
+{% endblock %}

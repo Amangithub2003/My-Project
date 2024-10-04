@@ -1,0 +1,64 @@
+
+{% extends 'base.html' %}
+
+{% block title %}sign-up page{% endblock %}
+
+{% block left %}
+<a href="{% url 'home' %}">Home</a>
+
+
+
+
+{% endblock %}
+{% block button %}<a href="{% url 'home' %}" class="btn btn-primary">back</a>{% endblock %}
+
+
+{% block content %}
+<section id="about" class="about-section">
+    <h2>Welcome to Exillence</h2>
+    <p>
+        At Exillence, we believe in the power of knowledge to transform lives. Our mission is to make high-quality education accessible to everyone, regardless of location or background. With a wide range of expertly crafted online courses, we provide you with the tools to thrive in today’s fast-evolving world.
+    </p>
+    <p>
+        Founded by <strong>Abhishek Singh</strong> and co-founded by <strong>Aman Raj</strong>, Exillence was born out of a shared vision to bridge the gap between traditional education and modern digital learning. Our courses span across multiple fields, from technology and business to personal development, ensuring that learners from all walks of life can find something to suit their goals.
+    </p>
+    
+    <p>
+        What sets Exillence apart is our commitment to a holistic learning experience. With hands-on projects, real-world case studies, and interactive lessons, you not only gain knowledge but also the practical skills needed to excel in your career or personal endeavors. Our community of expert instructors and learners are here to support you every step of the way.
+    </p>
+    <p>
+        Whether you're a professional looking to upskill, a student seeking new opportunities, or a lifelong learner with a passion for knowledge, Exillence is your gateway to excellence. Join us, and start your learning journey today!
+    </p>
+    <p>
+        <a href="{% url 'course' %}" class="btn btn-primary">Explore Our Courses</a>
+    </p>
+</section>
+
+<section id="team" class="team-section">
+    <h2>Meet Our Team</h2>
+    <p>At Exillence, we are proud to have a team of passionate individuals committed to delivering exceptional learning experiences. Get to know the minds behind our success:</p>
+
+    <div class="team-container">
+        <!-- Team Member 1 -->
+        <div class="team-member">
+            <img src="static\Snapchat-1449095132 (2).jpg" alt="Abishek Singh" class="team-photo">
+            <h3>Abhishek Singh</h3>
+            <p>Founder & CEO</p>
+            <p>Abhishek leads Exillence with a vision to make education accessible and impactful for everyone. His passion for technology and learning drives our mission forward.</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-member">
+            <img src="static\Screenshot 2024-10-02 152903.png" alt="Aman Raj" class="team-photo">
+            <h3>Aman Raj</h3>
+            <p>Co-Founder & CTO</p>
+            <p>Aman ensures our platform stays innovative and reliable, handling all things tech. His expertise in software development is the backbone of our digital infrastructure.</p>
+        </div>
+
+        <!-- Add more team members as needed -->
+    </div>
+</section>
+
+
+{% endblock %}
+

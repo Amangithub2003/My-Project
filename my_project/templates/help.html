@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}help desk{% endblock %}
+{% block left %}
+<a href="{% url 'home' %}">Home</a>
+
+<a href="#">teacher</a>
+<a href="{% url 'about' %}">about</a>
+<a href="#">help</a>
+{% endblock %}
+
+{% block button %}<a href="{% url 'course' %}" class="btn btn-primary">enroled</a>{% endblock %}
+
+
+{% block content %}
+<section id="help-desk" class="help-desk">
+    <h2>Need Help? We're Here for You!</h2>
+    <p>
+        If you have any questions or need assistance, our team is ready to support you. Please reach out to us through the form below, and we'll get back to you as soon as possible.
+    </p>
+    
+    <div class="help-options">
+        <h3>Contact Us </h3>
+        <p>Mail : help@exilence.com</p>
+        <p>Toll free No. : 12201220122</p>
+        <p>OR</p>
+        <p>Submit your query using the form below:</p>
+        <a href="https://forms.gle/PM1hu9WutVu9kV51A" target="_blank" class="btn btn-form">Submit a Help Request</a>
+        
+        <h3>Support Hours</h3>
+        <p>Monday to Friday: 9:00 AM - 6:00 PM</p>
+        <p>Saturday: 10:00 AM - 4:00 PM</p>
+        <p>Sunday: Closed</p>
+    </div>
+</section>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}sign-up page{% endblock %}
+{% block button %}<a href="{% url 'back' %}" class="btn btn-primary">back</a>{% endblock %}
+
+
+{% block content %}
+<div id="accountTab" class="account-tab">
+    <h2>Account Details</h2>
+    <p>Username: {{ user.username }}</p>
+    <p>Email: {{ user.email }}</p>
+    <a href="{% url 'index' %}">Log out</a>
+</div>
+
+
+{% endblock %}
+
+

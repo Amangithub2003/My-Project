@@ -1,0 +1,20 @@
+<h1>{{ course.title }}</h1>
+<p>{{ course.description }}</p>
+
+<h3>Video Lecture</h3>
+<video width="600" controls>
+    <source src="{{ course.video_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<h3>Course Materials</h3>
+<ul>
+    {% for material in materials %}
+    <li><a href="{{ material.file.url }}" download>{{ material.description }}</a> ({{ material.material_type }})</li>
+    {% endfor %}
+</ul>
+
+<form action="{% url 'enroll_in_course' course.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Enroll in this Course</button>
+</form>

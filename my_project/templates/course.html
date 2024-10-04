@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}courses{% endblock %}
+{% block left %}
+<a href="{% url 'home' %}">Home</a>
+
+<a href="#">teacher</a>
+<a href="{% url 'about' %}">about</a>
+<a href="{% url 'help' %}">help</a>
+
+
+
+
+
+{% endblock %}
+
+{% block button %}
+
+<section id="search-section" class="search-section"></section>
+    
+    <form action="/search" method="get" class="search-form">
+        <input type="text" name="query" placeholder="Search for courses..." class="search-input">
+        <button type="submit" class="search-btn">Search</button>
+    </form>
+</section>
+
+<a href="{% url 'course' %}" class="btn btn-primary">enroled</a>
+{% endblock %}
+
+
+{% block content %}
+<div class="course-container">
+    <h2>explore Our courses</h2>
+    <div class="courses-grid">
+        <div class="course-card">
+            <img src="\static\annie-spratt-V_yEK9wOuPw-unsplash.jpg" alt="Excel Mastery">
+            <h3>data science</h3>
+            <p>Ended</p>
+            <p>RS. 1000</p>
+            <br>
+            <a href="{% url 'course_xe' %}"
+             <button 
+             class="view-btn">View Course
+
+             </button>
+            </a>
+            
+        </div>
+        <div class="course-card">
+            <img src="static\annie-spratt-V_yEK9wOuPw-unsplash.jpg" alt="Creative Writing">
+            <h3>Creative Writing</h3>
+            <p>Ended</p>
+            <p>$150</p>
+            <button class="view-btn">View Course</button>
+        </div>
+        <div class="course-card">
+            <img src="static\annie-spratt-V_yEK9wOuPw-unsplash.jpg" alt="UI/UX Design">
+            <h3>UI/UX Design</h3>
+            <p>Ended</p>
+            <p>$180</p>
+            <button class="view-btn">View Course</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

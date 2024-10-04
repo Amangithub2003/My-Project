@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: #fce1d6;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px;
+    padding: 3px;
+
+}
+
+
+    
+
+.header img {
+    height: 50px;
+}
+.left-items {
+    display: flex;
+    align-items: center;
+    background-color: #fce1d6;
+    margin-right: 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: space-between;
+    padding: 3px;
+    
+}
+.left-items a{
+    color: #333;
+    padding: 2px;
+    margin: 4px;
+}
+
+.btn-primary  {
+    
+
+    padding: 10px 20px;
+    background-color: #355734;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #f9f9f9;
+    
+}
+.btn  {
+    text-decoration: none;
+    
+
+    padding: 10px 20px;
+    background-color: #355734;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #f9f9f9;
+    
+}
+
+.btn-primary:hover {
+    background-color: #6d936b;
+}
+
+.btn:hover {
+    background-color: #6d936b;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container img {
+    
+    height:300px;
+    width: 60%;
+    border-radius: 10px 10px 0 0;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #777;
+}
+
+/* Course Overview Section */
+.course-overview {
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.course-overview :right{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+    margin-bottom: 20px;
+
+}
+
+.progress-circle {
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    font-size: 24px;
+    color: #333;
+}
+
+.resume-btn {
+    background-color: #355734;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.resume-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Module Section */
+.module {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module h3 {
+    cursor: pointer;
+    color: #333;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #777;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    height: 8px;
+    width: 100%;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #4CAF50;
+    height: 8px;
+    border-radius: 4px;
+}
+
+/* Lesson Section */
+.lesson h4 {
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    padding: 10px 0;
+}
+
+.lesson-details {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.lesson-details li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.lesson-details li:hover {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .resume-btn {
+        font-size: 14px;
+    }
+}

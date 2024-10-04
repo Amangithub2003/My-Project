@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <!-- Add your stylesheet -->
+    <title>{% block title %}My Django Site{% endblock %}</title>
+
+
+
+    <link rel="stylesheet" href="{% static '\css\course.css' %}">   
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+
+        <div class="left-items">
+            <img src={% static 'Screenshot 2024-09-19 141443.png' %} alt="logo">
+        
+            <div>{% block left %}
+            <a href="{% url 'home' %}">Home</a>
+            <a href="#">course</a>
+            <a href="#">teacher</a>
+            <a href="{% url 'about' %}">about</a>
+            <a href="#">help</a>
+
+                {% endblock %}
+            </div>
+            
+            
+        </div>
+
+        
+        <div>{% block button %}{% endblock %}</div>
+        
+        
+          
+    
+
+        
+        
+    </div>
+    
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>About Exillence</h3>
+                <p>Exillence is an online learning platform offering top-tier courses across various fields. Our mission is to make education accessible, affordable, and impactful for everyone.</p>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/course">Courses</a></li>
+                    <li><a href="/help">Help</a></li>
+                    
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@exillence.com">support@exillence.com</a></p>
+                <p>Phone: +123-456-7890</p>
+                <p>Address: 123 Learning Lane, Education City</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2024 Exillence. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
